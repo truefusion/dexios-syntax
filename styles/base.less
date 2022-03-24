@@ -174,7 +174,7 @@ atom-text-editor {
 .syntax--punctuation {
     &.syntax--definition {
         &.syntax--comment {
-            color: @light-gray;
+            color: fade(@light-gray, 50%);
         }
 
         &.syntax--array,
@@ -299,7 +299,6 @@ atom-text-editor {
     &.syntax--link {
         color: @light-orange;
         font-style: italic;
-        text-decoration: underline;
     }
 
     &.syntax--method-call {
