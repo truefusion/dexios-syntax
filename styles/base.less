@@ -73,7 +73,7 @@ atom-text-editor {
         color: @syntax-text-color;
 
         &.syntax--assignment {
-            color: @orange;
+            color: @light-orange;
         }
     }
 
@@ -87,7 +87,22 @@ atom-text-editor {
 }
 
 .syntax--storage {
-    color: @orange;
+    color: @blue;
+
+    &.syntax--type {
+        color: @light-orange;
+
+        &.syntax--const,
+        &.syntax--function,
+        &.syntax--var {
+            color: @blue;
+
+            &.syntax--arrow {
+                color: @light-orange;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 .syntax--constant {
@@ -119,6 +134,18 @@ atom-text-editor {
 
     &.syntax--parameter.syntax--function {
         color: @syntax-text-color;
+    }
+
+    &.syntax--other {
+        color: @cyan;
+
+        &.syntax--object {
+            color: @very-light-gray;
+        }
+
+        &.syntax--property {
+            color: @light-gray;
+        }
     }
 }
 
@@ -192,6 +219,8 @@ atom-text-editor {
 .syntax--support {
     &.syntax--class {
         color: @light-orange;
+        font-style: italic;
+        text-decoration: underline;
     }
 
     &.syntax--function {
@@ -203,7 +232,7 @@ atom-text-editor {
     }
 
     &.syntax--property-name {
-        color: @cyan;
+        color: @very-light-gray;
     }
 }
 
@@ -219,11 +248,13 @@ atom-text-editor {
 
     &.syntax--other.syntax--inherited-class {
         color: @green;
+        font-style: italic;
     }
 
     &.syntax--name.syntax--class,
     &.syntax--name.syntax--type.syntax--class {
         color: @orange;
+        font-style: italic;
     }
 
     &.syntax--name.syntax--section {
@@ -233,10 +264,6 @@ atom-text-editor {
     &.syntax--tag {
         &.syntax--name {
             color: @very-light-gray;
-
-            &.syntax--css {
-                color: @cyan;
-            }
         }
     }
 
@@ -266,6 +293,8 @@ atom-text-editor {
     &.syntax--class,
     &.syntax--link {
         color: @light-orange;
+        font-style: italic;
+        text-decoration: underline;
     }
 
     &.syntax--require {

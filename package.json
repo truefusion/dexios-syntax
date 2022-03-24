@@ -1,15 +1,16 @@
 {
-  "name": "dexios-syntax",
-  "theme": "syntax",
-  "version": "0.0.0",
-  "description": "A short description of your syntax theme",
-  "keywords": [
-    "syntax",
-    "theme"
-  ],
-  "repository": "https://github.com/atom/dexios-syntax",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  }
+    "name": "dexios-syntax",
+    "theme": "syntax",
+    "version": "0.9.0",
+    "description": "Syntax theme for Atom based off of the Fedu theme. (Compatible with the One Dark UI theme.)",
+    "keywords": [
+        "dexios",
+        "syntax",
+        "theme"
+    ],
+    "repository": "https://github.com/truefusion/dexios-syntax",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    }
 }
