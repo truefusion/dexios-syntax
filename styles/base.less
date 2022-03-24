@@ -63,18 +63,13 @@ atom-text-editor {
 }
 
 .syntax--keyword {
-    color: @orange;
+    color: @blue;
 
     &.syntax--control {
-        color: @blue;
     }
 
     &.syntax--operator {
-        color: @syntax-text-color;
-
-        &.syntax--assignment {
-            color: @light-orange;
-        }
+        color: @light-orange;
     }
 
     &.syntax--other.syntax--special-method {
@@ -92,6 +87,7 @@ atom-text-editor {
     &.syntax--type {
         color: @light-orange;
 
+        &.syntax--class,
         &.syntax--const,
         &.syntax--function,
         &.syntax--var {
@@ -130,6 +126,10 @@ atom-text-editor {
 
     &.syntax--interpolation {
         color: @red;
+    }
+
+    &.syntax--language {
+        color: @blue;
     }
 
     &.syntax--parameter.syntax--function {
@@ -173,10 +173,6 @@ atom-text-editor {
 
 .syntax--punctuation {
     &.syntax--definition {
-        &.syntax--comment {
-            color: fade(@light-gray, 50%);
-        }
-
         &.syntax--array,
         &.syntax--parameters,
         &.syntax--string,
@@ -184,12 +180,25 @@ atom-text-editor {
             color: @orange;
         }
 
+        &.syntax--arguments {
+            &.syntax--bracket {
+                color: @very-light-gray !important;
+            }
+        }
+
         &.syntax--entity {
             color: @very-light-gray;
         }
 
-        &.syntax--tag {
+        &.syntax--modules {
             color: @orange;
+        }
+
+        &.syntax--body {
+            &.syntax--begin,
+            &.syntax--end {
+                color: @orange;
+            }
         }
 
         &.syntax--heading,
@@ -212,6 +221,7 @@ atom-text-editor {
         color: darken(@red, 10%);
     }
 
+    &.syntax--separator,
     &.syntax--terminator {
         color: @orange;
     }
@@ -243,8 +253,7 @@ atom-text-editor {
     }
 
     &.syntax--name.syntax--type {
-        color: @orange;
-        text-decoration: underline;
+        color: @very-light-gray;
     }
 
     &.syntax--other.syntax--inherited-class {
@@ -254,8 +263,9 @@ atom-text-editor {
 
     &.syntax--name.syntax--class,
     &.syntax--name.syntax--type.syntax--class {
-        color: @orange;
+        color: @light-orange;
         font-style: italic;
+        text-decoration: underline;
     }
 
     &.syntax--name.syntax--section {
@@ -270,6 +280,10 @@ atom-text-editor {
 
     &.syntax--other.syntax--attribute-name {
         color: @light-gray;
+
+        &.syntax--css {
+            font-style: italic;
+        }
 
         &.syntax--id {
             color: @blue;
@@ -289,10 +303,10 @@ atom-text-editor {
         &.syntax--comma {
             color: @light-gray;
         }
-    }
 
-    &.syntax--function-call {
-        color: @very-light-gray;
+        &.syntax--square {
+            // color: @blue;
+        }
     }
 
     &.syntax--class,
@@ -301,15 +315,22 @@ atom-text-editor {
         font-style: italic;
     }
 
+    &.syntax--function-call,
     &.syntax--method-call {
+        color: @very-light-gray;
+
         .syntax--arguments {
-            color: @light-gray;
+            // color: @light-gray;
 
             &.syntax--begin,
             &.syntax--end {
                 color: @orange;
             }
         }
+    }
+
+    &.syntax--arguments {
+        color: @very-light-gray;
     }
 
     &.syntax--require {
@@ -377,6 +398,7 @@ atom-text-editor {
         color: @orange;
     }
 }
+
 // Mini editor
 atom-text-editor[mini] .scroll-view {
     padding-left: 1px;
