@@ -282,13 +282,17 @@ atom-text-editor {
 }
 
 .syntax--meta {
-    &.syntax--function-call {
-        color: @light-gray2;
-    }
-
     &.syntax--brace,
     &.syntax--delimiter {
         color: @orange;
+
+        &.syntax--comma {
+            color: @light-gray;
+        }
+    }
+
+    &.syntax--function-call {
+        color: @very-light-gray;
     }
 
     &.syntax--class,
@@ -298,12 +302,23 @@ atom-text-editor {
         text-decoration: underline;
     }
 
+    &.syntax--method-call {
+        .syntax--arguments {
+            color: @light-gray;
+
+            &.syntax--begin,
+            &.syntax--end {
+                color: @orange;
+            }
+        }
+    }
+
     &.syntax--require {
         color: @blue;
     }
 
     &.syntax--selector {
-        color: @purple;
+        color: @cyan;
     }
 
     &.syntax--separator {
