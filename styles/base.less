@@ -57,9 +57,12 @@ atom-text-editor {
     }
 }
 
-.hard-tab:not(:first-child) {
-    border-left: 1px solid @dark-gray;
+.hard-tab {
     padding: 2px 0;
+
+    &:not(:first-child) {
+        border-left: 1px solid @dark-gray;
+    }
 }
 
 // Syntax styles
@@ -94,9 +97,12 @@ atom-text-editor {
     color: @blue;
 
     &.syntax--character.syntax--escape,
-    &.syntax--language,
     &.syntax--numeric {
         color: @orange;
+    }
+
+    &.syntax--language {
+        color: @blue;
     }
 
     &.syntax--other {
@@ -132,6 +138,8 @@ atom-text-editor {
 .syntax--invalid, .syntax--illegal {
     background-color: @red;
     color: @syntax-background-color;
+    font-weight: bold;
+    padding: 0.25rem;
 }
 
 .syntax--string {
@@ -175,6 +183,10 @@ atom-text-editor {
         &.syntax--heading,
         &.syntax--identity {
             color: @blue;
+        }
+
+        &.syntax--tag {
+            color: @light-gray;
         }
 
         &.syntax--bold {
