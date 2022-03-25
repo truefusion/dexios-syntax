@@ -1,0 +1,78 @@
+.syntax--php {
+    &.syntax--variable {
+        color: @very-light-gray;
+
+        &.syntax--punctuation {
+            color: @very-light-gray;
+        }
+    }
+
+    &.syntax--quoted,
+    &.syntax--string {
+        color: @blue;
+    }
+
+    &.syntax--array,
+    &.syntax--construct,
+    &.syntax--function,
+    &.syntax--function-call,
+    &.syntax--method-call {
+        color: @cyan;
+
+        .syntax--bracket {
+            color: @cyan;
+        }
+    }
+
+    &.syntax--delimiter,
+    &.syntax--keyword {
+        color: @blue;
+    }
+
+    &.syntax--constant,
+    &.syntax--operator,
+    &.syntax--punctuation,
+    &.syntax--section,
+    &.syntax--terminator {
+        color: @orange;
+
+        &.syntax--key {
+            color: @light-orange;
+            font-weight: bold;
+        }
+
+        &.syntax--string {
+            color: @blue;
+        }
+    }
+
+
+    &.syntax--alias,
+    &.syntax--assignment,
+    &.syntax--class,
+    &.syntax--numeric {
+        color: @light-orange;
+    }
+
+    &.syntax--class.syntax--entity {
+        font-style: italic;
+        text-decoration: underline;
+    }
+
+    &.syntax--storage {
+        color: @blue;
+
+        &.syntax--modifier {
+            color: @light-gray;
+        }
+    }
+
+    &.syntax--namespace,
+    &.syntax--parameters {
+        color: @light-gray;
+    }
+
+    &.syntax--separator {
+        color: @light-gray2;
+    }
+}
