@@ -1,0 +1,88 @@
+.syntax--comment {
+    color: fade(@light-gray, 50%);
+}
+
+.syntax--keyword,
+.syntax--storage {
+    color: @blue;
+}
+
+.syntax--operator {
+    color: @light-orange;
+}
+
+.syntax--unit {
+    color: @light-orange;
+}
+
+.syntax--constant {
+    color: @blue;
+
+    &.syntax--character.syntax--escape,
+    &.syntax--numeric {
+        color: @orange;
+    }
+
+    &.syntax--language {
+        color: @blue;
+    }
+}
+
+.syntax--variable {
+    color: @very-light-gray;
+
+    &.syntax--language {
+        color: @blue;
+    }
+}
+
+.syntax--invalid, .syntax--illegal {
+    background-color: @red;
+    border-radius: 3px;
+    color: @syntax-background-color;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25rem;
+}
+
+.syntax--string {
+    color: @orange;
+
+    &.syntax--regexp {
+        color: @cyan;
+    }
+}
+
+&.syntax--link {
+    color: @light-orange;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+&.syntax--function,
+&.syntax--any-method {
+    color: @cyan;
+}
+
+.syntax--brace,
+.syntax--delimiter {
+    color: @light-orange;
+
+    &.syntax--comma {
+        color: @blue;
+    }
+}
+
+.syntax--function-call,
+.syntax--method-call {
+    color: @very-light-gray;
+
+    .syntax--arguments {
+        // color: @light-gray;
+
+        &.syntax--begin,
+        &.syntax--end {
+            color: @orange;
+        }
+    }
+}
