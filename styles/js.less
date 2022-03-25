@@ -1,0 +1,78 @@
+.syntax--js {
+    &.syntax--arguments,
+    &.syntax--constant,
+    &.syntax--object,
+    &.syntax--module,
+    &.syntax--variable {
+        color: @very-light-gray;
+    }
+
+    &.syntax--modules {
+        &.syntax--begin,
+        &.syntax--end {
+            color: @orange;
+        }
+    }
+
+    &.syntax--property {
+        color: @light-gray;
+    }
+
+    &.syntax--delimiter,
+    &.syntax--keyword,
+    &.syntax--language,
+    &.syntax--storage {
+        color: @blue;
+
+        &.syntax--period {
+            color: @orange;
+        }
+    }
+
+    &.syntax--brace,
+    &.syntax--class,
+    &.syntax--operator,
+    &.syntax--punctuation {
+        color: @light-orange;
+
+        &.syntax--arguments {
+            color: @cyan;
+        }
+    }
+
+    &.syntax--numeric,
+    &.syntax--string,
+    &.syntax--terminator {
+        color: @orange;
+    }
+
+    &.syntax--function,
+    &.syntax--method {
+        color: @cyan;
+
+        &.syntax--arrow {
+            color: @light-orange;
+            font-weight: bold;
+        }
+
+        &.syntax--begin,
+        &.syntax--end {
+            color: @orange;
+        }
+
+        &.syntax--parameter {
+            color: @light-gray;
+        }
+
+        .syntax--parameters {
+            .syntax--bracket {
+                color: @orange;
+            }
+        }
+    }
+
+    &.syntax--class {
+        font-style: italic;
+        text-decoration: underline;
+    }
+}

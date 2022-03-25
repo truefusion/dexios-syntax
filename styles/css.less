@@ -1,0 +1,33 @@
+.syntax--css {
+    &.syntax--property-name,
+    &.syntax--tag {
+        color: @very-light-gray;
+    }
+
+    .syntax--keyword,
+    &.syntax--numeric,
+    &.syntax--punctuation {
+        color: @orange;
+    }
+
+    .syntax--operator,
+    &.syntax--unit {
+        color: @light-orange;
+    }
+
+    .syntax--variable {
+        color: @blue;
+
+        .syntax--punctuation {
+            // color: @light-gray;
+        }
+    }
+
+    &.syntax--class {
+        font-style: italic;
+
+        .syntax--punctuation {
+            color: @light-orange;
+        }
+    }
+}

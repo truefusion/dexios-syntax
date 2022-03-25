@@ -1,0 +1,72 @@
+atom-text-editor {
+    background-color: @gray;
+    color: @light-gray;
+
+    .wrap-guide {
+        background-color: @very-dark-gray;
+    }
+
+    .indent-guide {
+        color: @gray;
+    }
+
+    .invisible-character {
+        color: @gray;
+    }
+
+    .gutter {
+        background-color: @gray;
+        color: @light-gray;
+
+        .line-number {
+            border-right: 3px solid @dark-gray;
+
+            &.cursor-line {
+                background-color: @syntax-gutter-background-color-selected;
+                border-color: @orange;
+                color: @very-light-gray;
+                opacity: 1;
+            }
+        }
+    }
+
+    .fold-marker:after,
+    .gutter .line-number.folded,
+    .gutter .line-number:after {
+        color: @orange;
+        opacity: 1;
+    }
+
+    .invisible {
+        color: @light-gray;
+    }
+
+    .cursor {
+        color: @orange;
+    }
+
+    .cursor-line {
+        background-color: @dark-gray;
+    }
+
+    .selection {
+        @border: fade(@orange, 50%);
+
+        &.highlight {
+            filter: drop-shadow(1px 0 0 @border)
+                drop-shadow(-1px 0 0 @border)
+                drop-shadow(0 1px 0 @border)
+                drop-shadow(0 -1px 0 @border);
+        }
+
+        .region {
+            background-color: @syntax-selection-color;
+            right: 1px !important;
+        }
+    }
+}
+
+// Mini editor
+atom-text-editor[mini] .scroll-view {
+    padding-left: 1px;
+}
