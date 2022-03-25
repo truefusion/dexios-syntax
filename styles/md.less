@@ -1,0 +1,49 @@
+.syntax--gfm {
+    .syntax--bold {
+        font-weight: bold;
+    }
+
+    .syntax--italic {
+        font-style: italic;
+    }
+
+    .syntax--underline {
+        text-decoration: underline;
+    }
+
+    .syntax--border,
+    .syntax--heading,
+    .syntax--punctuation {
+        color: @orange;
+
+        &.syntax--inner {
+            color: @light-orange;
+        }
+    }
+
+    .syntax--entity,
+    .syntax--quote {
+        color: @very-light-gray;
+
+        &.syntax--punctuation {
+            color: @light-orange;
+        }
+
+        .syntax--support {
+            color: @orange;
+            font-weight: bold;
+        }
+    }
+
+    .syntax--link {
+        color: @blue;
+    }
+
+    .syntax--raw {
+        background-color: fade(@light-gray, 15%);
+        border-radius: 3px;
+        color: @very-light-gray;
+        display: inline-block;
+        padding: 0 2px;
+    }
+}
