@@ -4,13 +4,13 @@
         color: @very-light-gray;
     }
 
-    .syntax--keyword,
+    &.syntax--keyword,
     &.syntax--numeric,
     &.syntax--punctuation {
         color: @orange;
     }
 
-    .syntax--operator,
+    &.syntax--operator,
     &.syntax--unit {
         color: @light-orange;
     }
@@ -19,15 +19,37 @@
         color: @blue;
 
         .syntax--punctuation {
-            // color: @light-gray;
+            color: @blue;
+
+            &.syntax--string {
+                color: @orange;
+            }
         }
     }
 
-    &.syntax--class {
-        font-style: italic;
+    .syntax--at-rule {
+        color: @cyan;
 
         .syntax--punctuation {
-            color: @light-orange;
+            color: @cyan;
+
+            &.syntax--string {
+                color: @orange;
+            }
+
+            &.syntax--terminator {
+                color: @orange;
+            }
         }
+    }
+
+    &.syntax--class,
+    &.syntax--pseudo-class {
+        color: @light-gray;
+        font-style: italic;
+    }
+
+    &.syntax--string {
+        color: @orange;
     }
 }
