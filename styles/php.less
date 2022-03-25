@@ -20,13 +20,19 @@
         color: @cyan;
 
         .syntax--bracket {
-            color: @cyan;
+            color: @light-orange;
         }
     }
 
     &.syntax--delimiter,
     &.syntax--keyword {
         color: @blue;
+
+        &.syntax--control {
+            &.syntax--exit {
+                color: @cyan;
+            }
+        }
     }
 
     &.syntax--constant,
@@ -41,7 +47,11 @@
             font-weight: bold;
         }
 
-        &.syntax--string {
+        &.syntax--bracket {
+            color: @light-orange;
+        }
+
+        &.syntax--string:not(.syntax--operator) {
             color: @blue;
         }
     }
@@ -50,11 +60,21 @@
     &.syntax--alias,
     &.syntax--assignment,
     &.syntax--class,
+    &.syntax--inherited-class,
     &.syntax--numeric {
         color: @light-orange;
     }
 
-    &.syntax--class.syntax--entity {
+    &.syntax--class,
+    &.syntax--inherited-class {
+        &.syntax--entity,
+        &.syntax--support {
+            font-style: italic;
+            text-decoration: underline;
+        }
+    }
+
+    &.syntax--alias {
         font-style: italic;
         text-decoration: underline;
     }
