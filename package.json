@@ -1,7 +1,7 @@
 {
     "name": "dexios-syntax",
     "theme": "syntax",
-    "version": "0.9.5",
+    "version": "0.9.6",
     "description": "Syntax theme for Atom based off of the Fedu theme. (Compatible with the One Dark UI theme.)",
     "keywords": [
         "dexios",
