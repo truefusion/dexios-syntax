@@ -30,17 +30,18 @@
     }
 
     &.syntax--brace,
+    &.syntax--bracket,
     &.syntax--class,
+    &.syntax--numeric,
     &.syntax--operator,
     &.syntax--punctuation {
         color: @light-orange;
 
-        &.syntax--arguments {
-            color: @cyan;
+        &.syntax--square {
+            color: @orange;
         }
     }
 
-    &.syntax--numeric,
     &.syntax--string,
     &.syntax--terminator {
         color: @orange;
@@ -55,21 +56,12 @@
             font-weight: bold;
         }
 
-        &.syntax--begin,
-        &.syntax--end {
+        &.syntax--body {
             color: @orange;
         }
 
         &.syntax--parameter {
             color: @light-gray;
-        }
-
-        .syntax--parameters {
-            color: @light-gray;
-
-            .syntax--bracket {
-                color: @orange;
-            }
         }
     }
 

@@ -5,22 +5,17 @@
         &.syntax--punctuation {
             color: @very-light-gray;
         }
-    }
 
-    &.syntax--quoted,
-    &.syntax--string {
-        color: @blue;
-    }
+        &.syntax--language {
+            color: @blue;
 
-    &.syntax--array,
-    &.syntax--construct,
-    &.syntax--function,
-    &.syntax--function-call,
-    &.syntax--method-call {
-        color: @cyan;
+            .syntax--punctuation {
+                color: @blue;
+            }
+        }
 
-        .syntax--bracket {
-            color: @light-orange;
+        &.syntax--property {
+            color: @light-gray;
         }
     }
 
@@ -35,10 +30,24 @@
         }
     }
 
-    &.syntax--constant,
+    &.syntax--alias,
+    &.syntax--assignment,
+    &.syntax--class,
+    &.syntax--inherited-class,
+    &.syntax--numeric,
     &.syntax--operator,
-    &.syntax--punctuation,
-    &.syntax--section,
+    &.syntax--punctuation {
+        color: @light-orange;
+
+        &.syntax--array {
+            color: @orange;
+        }
+    }
+
+    &.syntax--constant,
+    &.syntax--quoted,
+    // &.syntax--section,
+    &.syntax--string,
     &.syntax--terminator {
         color: @orange;
 
@@ -46,23 +55,14 @@
             color: @light-orange;
             font-weight: bold;
         }
-
-        &.syntax--bracket {
-            color: @light-orange;
-        }
-
-        &.syntax--string:not(.syntax--operator) {
-            color: @blue;
-        }
     }
 
-
-    &.syntax--alias,
-    &.syntax--assignment,
-    &.syntax--class,
-    &.syntax--inherited-class,
-    &.syntax--numeric {
-        color: @light-orange;
+    &.syntax--array,
+    &.syntax--construct,
+    &.syntax--function,
+    &.syntax--function-call,
+    &.syntax--method-call {
+        color: @cyan;
     }
 
     &.syntax--class,
@@ -89,7 +89,11 @@
 
     &.syntax--namespace,
     &.syntax--parameters {
-        color: @light-gray;
+        .syntax--parameter {
+            .syntax--variable {
+                color: @light-gray;
+            }
+        }
     }
 
     &.syntax--separator {
